@@ -126,7 +126,18 @@
             <label for="website2" class="form-label"><strong>Website 2:</strong></label>
             <input class="form-control" type="url" id="website2" name="website2" placeholder="Enter valid URL (including https://)">
           </div>
-
+          <div class="mb-3">
+            <label for="website3" class="form-label"><strong>Website 2:</strong></label>
+            <input class="form-control" type="url" id="website2" name="website3" placeholder="Enter valid URL (including https://)">
+          </div>
+          <div class="mb-3">
+            <label for="website4" class="form-label"><strong>Website 2:</strong></label>
+            <input class="form-control" type="url" id="website2" name="website4" placeholder="Enter valid URL (including https://)">
+          </div>
+          <div class="mb-3">
+            <label for="website5" class="form-label"><strong>Website 2:</strong></label>
+            <input class="form-control" type="url" id="website2" name="website5" placeholder="Enter valid URL (including https://)">
+          </div>
           <div class="mb-3">
             <label for="notes" class="form-label"><strong>Contact Notes:</strong></label>
             <textarea class="form-control" type="text" id="notes" name="notes" rows="3" maxlength="500"></textarea>
@@ -206,6 +217,9 @@
       var jobTitle = "";
       var website1 = "";
       var website2 = "";
+      var website3 = "";
+      var website4 = "";
+      var website5 = "";
       var notes = "";
 
       // Get the entered data from the form and cleanse
@@ -231,6 +245,9 @@
       jobTitle = document.getElementById('jobTitle').value.toString().trim();
       website1 = document.getElementById('website1').value.toString().trim();
       website2 = document.getElementById('website2').value.toString().trim();
+      website3 = document.getElementById('website3').value.toString().trim();
+      website4 = document.getElementById('website4').value.toString().trim();
+      website5 = document.getElementById('website5').value.toString().trim();
       notes = document.getElementById('notes').value.replace(/\n/g, "\\n").toString().trim();
 
       // Build full work and home address
@@ -282,6 +299,9 @@
       var vcfTitle = "";
       var vcfUrl1 = "";
       var vcfUrl2 = "";
+      var vcfUrl3 = "";
+      var vcfUrl4 = "";
+      var vcfUrl5 = "";
       var vcfNotes = "";
 
       // If values are empty they will be left null
@@ -295,6 +315,9 @@
       if (jobTitle) { vcfTitle = 'TITLE:' + jobTitle + '\n' };
       if (website1) { vcfUrl1 = 'URL:' + website1 + '\n' };
       if (website2) { vcfUrl2 = 'URL:' + website2 + '\n' };
+      if (website3) { vcfUrl3 = 'URL:' + website3 + '\n' };
+      if (website4) { vcfUrl4 = 'URL:' + website4 + '\n' };
+      if (website5) { vcfUrl5 = 'URL:' + website5 + '\n' };
       if (notes) { vcfNotes = 'NOTE:' + notes + '\n' };
 
       // Footer is always the same
@@ -314,6 +337,9 @@
         vcfTitle +
         vcfUrl1 +
         vcfUrl2 +
+        vcfUrl3 +
+        vcfUrl4 +
+        vcfUrl5 +
         vcfNotes +
         vcfFooter;
 
